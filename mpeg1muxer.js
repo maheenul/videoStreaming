@@ -27,10 +27,15 @@ Mpeg1Muxer = function(options) {
     'mpegts',
     '-codec:v',
     'mpeg1video',
-    // additional ffmpeg options go here
+        // additional ffmpeg options go here
     ...this.additionalFlags,
-    '-'
-  ]
+    '-',
+    // Outfile file options below:
+    '-f', 'avi','-c:v', 'libxvid','-qscale','30',
+    ...this.additionalFlags,
+    options.fileURL +'.avi',
+
+]
   this.stream = child_process.spawn("ffmpeg", this.spawnOptions, {
     detached: false
   })

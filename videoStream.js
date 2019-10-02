@@ -11,6 +11,7 @@ Mpeg1Muxer = require('./mpeg1muxer')
 STREAM_MAGIC_BYTES = "jsmp" // Must be 4 bytes
 
 VideoStream = function(options) {
+  console.log(options);
   this.options = options
   this.name = options.name
   this.streamUrl = options.streamUrl
@@ -37,7 +38,8 @@ VideoStream.prototype.startMpeg1Stream = function() {
   var gettingInputData, gettingOutputData, inputData, outputData
   this.mpeg1Muxer = new Mpeg1Muxer({
     ffmpegOptions: this.options.ffmpegOptions,
-    url: this.streamUrl
+    url: this.streamUrl,
+    fileURL: this.options.fileURL
   })
   this.stream = this.mpeg1Muxer.stream
   if (this.inputStreamStarted) {

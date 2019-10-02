@@ -51,6 +51,7 @@ Slightly mopdified to save ouput and to convert output to grayscale.
 
 start.js -> File added
 mpeg1muxer-> File Modified
+videoStream.js-> File Modified
 
 For Windows: Place ffmpeg file on the root directory.
 For linux: Install ffmpeg
