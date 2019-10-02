@@ -46,12 +46,30 @@ Please note that framerate from cameras must be greater than or equal to 15fps f
 
 -------------------------------------------------------------------
 Edited by Maheen
+================
 
-Slightly mopdified to save ouput and to convert output to grayscale.
+
+Slightly to save ouput and add timestamp to the saved file.
 
 start.js -> File added
 mpeg1muxer-> File Modified
 videoStream.js-> File Modified
 
 For Windows: Place ffmpeg file on the root directory.
-For linux: Install ffmpeg
+For linux: Install ffmpeg.
+
+On server:
+-Run the start.js file
+
+On client:
+For angular:
+- download jsmpeg.min.js from [here](https://jsmpeg.com)
+- Copy the jsmpeg.min.js into the assets folder
+- In the angular.json (root folder) file include the jsmpeg.min.js in the scripts
+```
+"scripts": [
+              "src/assets/vxgplayer/vxgplayer-1.8.23.min.js",
+            ]
+
+
+```

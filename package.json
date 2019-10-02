@@ -4,8 +4,7 @@
   "description": "node-rtsp-stream\r ================",
   "main": "index.js",
   "scripts": {
-    "prepublish": "npm run test",
-    "test": "mocha test/*.js"
+    "prepublish": "npm run test"
   },
   "repository": {
     "type": "git",
