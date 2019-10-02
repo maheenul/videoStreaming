@@ -1,4 +1,4 @@
 node_modules
 ffmpeg.exe
-video/*
+video/**
 runner.bat
