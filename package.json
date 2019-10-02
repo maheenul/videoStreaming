@@ -1,0 +1,29 @@
+{
+  "name": "modified-rtsp-stream",
+  "version": "0.0.1",
+  "description": "node-rtsp-stream\r ================",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "npm run test",
+    "test": "mocha test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyriesent/node-rtsp-stream.git"
+  },
+  "author": "David Jsa <david@jsa.me>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "ws": "^7.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/kyriesent/node-rtsp-stream/issues"
+  },
+  "homepage": "https://github.com/kyriesent/node-rtsp-stream#readme",
+  "directories": {
+    "test": "test"
+  }
+}
