@@ -27,16 +27,22 @@ Mpeg1Muxer = function(options) {
     'mpegts',
     '-codec:v',
     'mpeg1video',
-    //'-vf', 'scale=240:180',
-    '-q:v','5',
+    '-q:v','6',
+    '-threads','3' ,
     '-vf', 'hue=s=0, scale=240:180',
         // additional ffmpeg options go here
     ...this.additionalFlags,
     '-',
     // Outfile file options below:
-    '-f', 'avi','-c:v', 'libxvid','-qscale','30','-vf', 'hue=s=0',
+    '-f',
+    'mpeg',
+    '-codec:v',
+    'mpeg1video',
+    '-q:v','6',
+    '-threads','3' ,
+    '-vf', 'hue=s=0, scale=240:180',
     ...this.additionalFlags,
-    options.fileURL +'.avi',
+    options.fileURL +'.mpeg',
 
 ]
   this.stream = child_process.spawn("ffmpeg", this.spawnOptions, {
