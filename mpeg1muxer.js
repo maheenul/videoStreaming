@@ -27,7 +27,7 @@ Mpeg1Muxer = function(options) {
     'mpegts',
     '-codec:v',
     'mpeg1video',
-    '-q:v','3',
+    '-q:v','5',
     '-threads','2' ,
     '-vf', 'hue=s=0, scale=320:240',
         // additional ffmpeg options go here
@@ -38,7 +38,7 @@ Mpeg1Muxer = function(options) {
     'mpeg',
     '-codec:v',
     'mpeg1video',
-    '-q:v','3',
+    '-q:v','5',
     '-threads','2' ,
     '-vf', 'hue=s=0, scale=320:240',
     ...this.additionalFlags,
