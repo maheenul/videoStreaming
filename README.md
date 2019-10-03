@@ -73,3 +73,7 @@ For angular:
 
 
 ```
+- On html add the player using the code below
+```
+<div class="jsmpeg" data-audio='false'  data-url="ws://IP_OF_SERVER:PORT_OF_SERVER"></div>
+```

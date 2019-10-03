@@ -15,7 +15,8 @@ stream = new Stream({
     wsPort: 9999,
     ffmpegOptions: { // options ffmpeg flags
       '-stats': '', // an option with no neccessary value uses a blank string
-      '-r': 40, // options with required values specify the value after the key //FPS
+      '-r': 20, // options with required values specify the value after the key //FPS
+      '-b:v':'120k',
     },
     fileURL:this.directory+this.filename
   })

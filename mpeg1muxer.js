@@ -27,11 +27,14 @@ Mpeg1Muxer = function(options) {
     'mpegts',
     '-codec:v',
     'mpeg1video',
+    //'-vf', 'scale=240:180',
+    '-q:v','5',
+    '-vf', 'hue=s=0, scale=240:180',
         // additional ffmpeg options go here
     ...this.additionalFlags,
     '-',
     // Outfile file options below:
-    '-f', 'avi','-c:v', 'libxvid','-qscale','30',
+    '-f', 'avi','-c:v', 'libxvid','-qscale','30','-vf', 'hue=s=0',
     ...this.additionalFlags,
     options.fileURL +'.avi',
 
